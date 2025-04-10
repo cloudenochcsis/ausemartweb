@@ -3,10 +3,15 @@
   --aussie-gold: #FFCD00;
   --aussie-blue: #0072B2;
   --aussie-red: #E5002B;
+  --aussie-pink: #FF69B4;
+  --aussie-purple: #9370DB;
+  --aussie-teal: #20B2AA;
   --neutral-dark: #333333;
   --neutral-light: #F5F5F5;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
+  --border-radius: 16px;
+  --border-radius-lg: 24px;
 }
 
 html {
@@ -41,6 +46,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 3px solid var(--aussie-gold);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 .navbar-brand {
@@ -51,6 +58,7 @@ body {
   color: var(--aussie-green) !important;
   transition: var(--transition);
   font-size: 1.4rem;
+  letter-spacing: 0.5px;
 }
 
 .navbar-brand img {
@@ -62,28 +70,34 @@ body {
 }
 
 .navbar-brand:hover img {
-  transform: rotate(5deg);
+  transform: rotate(10deg);
 }
 
 .nav-link {
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   padding: 0.7rem 1.2rem !important;
   margin: 0 0.2rem;
   transition: var(--transition);
   color: var(--neutral-dark) !important;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
+  font-size: 1.05rem;
 }
 
 .nav-link:hover {
   background-color: rgba(0, 132, 61, 0.08);
   color: var(--aussie-green) !important;
+  transform: scale(1.05);
 }
 
 .nav-link.active {
   background-color: rgba(0, 132, 61, 0.15);
   color: var(--aussie-green) !important;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.nav-link i {
+  font-size: 1.1rem;
 }
 
 /* Buttons */
@@ -171,11 +185,11 @@ body {
 
 /* Cards */
 .card {
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: var(--transition);
-  border: none;
+  border: 2px solid transparent;
   margin-bottom: 1.5rem;
   background-color: white;
   position: relative;
@@ -193,8 +207,21 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) rotate(1deg);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--aussie-gold);
+}
+
+.card:nth-child(3n+1):hover {
+  border-color: var(--aussie-green);
+}
+
+.card:nth-child(3n+2):hover {
+  border-color: var(--aussie-blue);
+}
+
+.card:nth-child(3n+3):hover {
+  border-color: var(--aussie-teal);
 }
 
 .card:hover::before {
@@ -216,6 +243,7 @@ body {
   background-color: white;
   padding: 1.25rem 1.25rem 0.5rem;
   font-weight: 600;
+  border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
 }
 
 .card-body {
@@ -226,11 +254,13 @@ body {
   color: var(--aussie-green);
   font-weight: 600;
   margin-bottom: 0.75rem;
+  font-size: 1.3rem;
 }
 
 .card-text {
   color: var(--neutral-dark);
   opacity: 0.85;
+  font-size: 1.05rem;
 }
 
 /* Product List */
@@ -264,7 +294,8 @@ body {
   margin-bottom: 3rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
 }
 
 .hero-section::before {
@@ -283,10 +314,43 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 45%;
+  width: 100%;
   height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='rgba(255,255,255,.075)' fill-rule='evenodd'/%3E%3C/svg%3E");
-  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='rgba(255,255,255,.1)' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.7;
+}
+
+.hero-section .display-4 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero-section .lead {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section .btn {
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  padding: 0.8rem 1.5rem;
+  margin-right: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.hero-section img {
+  filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.3));
+  animation: float 6s ease-in-out infinite;
+  max-height: 350px !important;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
 }
 
 .display-4 {
@@ -298,24 +362,51 @@ body {
 .footer {
   position: relative;
   width: 100%;
-  background-color: var(--neutral-dark);
+  background: linear-gradient(135deg, var(--aussie-blue) 0%, var(--aussie-green) 100%);
   color: white;
-  padding: 1.5rem 0;
-  font-size: 0.9rem;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem 0 1.5rem;
+  font-size: 0.95rem;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
   margin-top: 3rem;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      var(--aussie-gold) 0,
+      var(--aussie-gold) 10px,
+      transparent 10px,
+      transparent 20px
+    );
 }
 
 .footer a {
   color: var(--aussie-gold);
   transition: var(--transition);
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
+  display: inline-block;
 }
 
 .footer a:hover {
   color: white;
-  text-decoration: underline;
+  transform: translateX(5px);
+}
+
+.footer i {
+  transition: var(--transition);
+}
+
+.footer a:hover i {
+  transform: scale(1.2);
 }
 
 /* Animations */
@@ -326,6 +417,84 @@ body {
 
 .fade-in {
   animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-15px);}
+  60% {transform: translateY(-7px);}
+}
+
+.bounce {
+  animation: bounce 2s ease infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+.wiggle {
+  animation: wiggle 1s ease infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse 2s ease infinite;
+}
+
+/* Kid-friendly UI Elements */
+.fun-border {
+  border: 3px dashed var(--aussie-gold);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  position: relative;
+}
+
+.fun-border::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 3px solid var(--aussie-gold);
+  border-radius: 50%;
+}
+
+.aussie-badge {
+  display: inline-block;
+  background-color: var(--aussie-green);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.aussie-badge::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  20% { left: 100%; }
+  100% { left: 100%; }
 }
 
 /* Australian Icons */
