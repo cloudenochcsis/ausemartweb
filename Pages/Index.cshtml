@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model IndexModel
 @{
     ViewData["Title"] = "Home";
@@ -8,20 +8,20 @@
 <div class="hero-section">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-7 fade-in">
-                <h1 class="display-4">G'day and welcome to Aus-E-Mart!</h1>
-                <p class="lead mb-4">Your one-stop destination for authentic Australian products shipped worldwide with love from Down Under.</p>
-                <div class="d-flex gap-2">
+            <div class="col-lg-6 fade-in hero-content">
+                <h1 class="display-4">Welcome to ToyLand!</h1>
+                <p class="lead mb-4">Discover a world of imagination with our amazing collection of toys for kids of all ages.</p>
+                <div class="d-flex gap-3">
                     <a href="/Products" class="btn btn-primary btn-lg">
-                        Explore Products <i class="fas fa-arrow-right ms-2"></i>
+                        Explore Toys <i class="fas fa-rocket ms-2"></i>
                     </a>
-                    <a href="#featured" class="btn btn-outline-light btn-lg">
+                    <a href="#featured" class="btn btn-accent btn-lg">
                         Today's Deals <i class="fas fa-tag ms-2"></i>
                     </a>
                 </div>
             </div>
-            <div class="col-lg-5 d-none d-lg-block text-center fade-in">
-                <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/512/null/external-kangaroo-animal-flaticons-lineal-color-flat-icons-2.png" alt="Australia" class="img-fluid" style="max-height: 300px;">
+            <div class="col-lg-6 d-none d-lg-block text-center fade-in">
+                <img src="https://img.icons8.com/fluency/512/null/teddy-bear.png" alt="ToyLand" class="img-fluid hero-image" style="max-height: 350px;">
             </div>
         </div>
     </div>
@@ -29,70 +29,203 @@
 
 <!-- Features Section -->
 <div class="container my-5">
+    <h2 class="section-title text-center mb-5">Why Choose ToyLand?</h2>
     <div class="row">
-        <div class="col-md-4 mb-4 fade-in">
+        <div class="col-md-4 mb-4 fade-in delay-1">
             <div class="card h-100 text-center p-4">
                 <div class="mb-3">
-                    <i class="fas fa-shipping-fast text-primary" style="font-size: 3rem;"></i>
+                    <i class="fas fa-medal text-primary" style="font-size: 3.5rem;"></i>
                 </div>
-                <h3>Fast Shipping</h3>
-                <p>Express delivery from Australia to anywhere in the world.</p>
+                <h3>Quality Toys</h3>
+                <p>We carefully select toys that meet the highest safety and quality standards for your children.</p>
             </div>
         </div>
-        <div class="col-md-4 mb-4 fade-in">
+        <div class="col-md-4 mb-4 fade-in delay-2">
             <div class="card h-100 text-center p-4">
                 <div class="mb-3">
-                    <i class="fas fa-check-circle text-primary" style="font-size: 3rem;"></i>
+                    <i class="fas fa-shipping-fast text-secondary" style="font-size: 3.5rem;"></i>
                 </div>
-                <h3>Authentic Products</h3>
-                <p>100% genuine Aussie products sourced directly from local suppliers.</p>
+                <h3>Fast Delivery</h3>
+                <p>Quick shipping to your doorstep with our reliable delivery partners. Free shipping on orders over $50!</p>
             </div>
         </div>
-        <div class="col-md-4 mb-4 fade-in">
+        <div class="col-md-4 mb-4 fade-in delay-3">
             <div class="card h-100 text-center p-4">
                 <div class="mb-3">
-                    <i class="fas fa-headset text-primary" style="font-size: 3rem;"></i>
+                    <i class="fas fa-undo text-accent" style="font-size: 3.5rem;"></i>
                 </div>
-                <h3>24/7 Support</h3>
-                <p>Our friendly team is always ready to assist you with any questions.</p>
+                <h3>Easy Returns</h3>
+                <p>Not completely satisfied? Return any item within 30 days for a full refund, no questions asked!</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Australian Icons Section -->
+<!-- Categories Section -->
 <div class="container my-5 text-center">
-    <h2 class="mb-4">Discover Aussie Icons</h2>
-    <div class="aussie-icons">
-        <div class="aussie-icon">
-            <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/128/null/external-koala-animal-flaticons-lineal-color-flat-icons-2.png" width="100" alt="Koala" />
-            <h5 class="mt-3">Koala Collection</h5>
+    <h2 class="section-title">Shop By Category</h2>
+    <div class="toy-categories">
+        <div class="toy-category">
+            <img src="https://img.icons8.com/fluency/128/null/teddy-bear.png" alt="Plush Toys" />
+            <h5 class="mt-3">Plush Toys</h5>
         </div>
-        <div class="aussie-icon">
-            <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/128/null/external-platypus-animal-flaticons-lineal-color-flat-icons-2.png" width="100" alt="Platypus" />
-            <h5 class="mt-3">Platypus Products</h5>
+        <div class="toy-category">
+            <img src="https://img.icons8.com/fluency/128/null/brick.png" alt="Building Blocks" />
+            <h5 class="mt-3">Building Blocks</h5>
         </div>
-        <div class="aussie-icon">
-            <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/128/null/external-snake-animal-flaticons-lineal-color-flat-icons.png" width="100" alt="Snake" />
-            <h5 class="mt-3">Snake Souvenirs</h5>
+        <div class="toy-category">
+            <img src="https://img.icons8.com/fluency/128/null/controller.png" alt="Video Games" />
+            <h5 class="mt-3">Video Games</h5>
+        </div>
+        <div class="toy-category">
+            <img src="https://img.icons8.com/fluency/128/null/doll.png" alt="Dolls" />
+            <h5 class="mt-3">Dolls</h5>
+        </div>
+        <div class="toy-category">
+            <img src="https://img.icons8.com/fluency/128/null/puzzle.png" alt="Puzzles" />
+            <h5 class="mt-3">Puzzles</h5>
         </div>
     </div>
-    <a href="/Products" class="btn btn-primary mt-4">View All Categories</a>
+    <a href="/Categories" class="btn btn-primary mt-5">View All Categories</a>
+</div>
+
+<!-- Featured Products Section -->
+<div class="container my-5" id="featured">
+    <h2 class="section-title text-center">Featured Products</h2>
+    <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <span class="product-badge new">NEW</span>
+                    <img src="https://images.unsplash.com/photo-1563901935883-cb61f5d49be4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Colorful Building Blocks">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Colorful Building Blocks</h5>
+                    <p class="card-text flex-grow-1">Set of 100 colorful building blocks for endless creative play.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="price">$24.99</span>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <span class="product-badge popular">POPULAR</span>
+                    <img src="https://images.unsplash.com/photo-1562040506-a9b32cb51b94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Teddy Bear">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Cuddly Teddy Bear</h5>
+                    <p class="card-text flex-grow-1">Super soft teddy bear that's perfect for cuddling and bedtime.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="price">$19.99</span>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <span class="product-badge sale">SALE</span>
+                    <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Remote Control Car">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Remote Control Car</h5>
+                    <p class="card-text flex-grow-1">Fast and durable remote control car with LED lights and stunts.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div>
+                            <span class="text-decoration-line-through text-muted me-2">$39.99</span>
+                            <span class="price">$29.99</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Wooden Puzzle">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Wooden Animal Puzzle</h5>
+                    <p class="card-text flex-grow-1">Educational wooden puzzle featuring 12 different animals.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="price">$14.99</span>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a href="/Products" class="btn btn-outline-primary">View All Products</a>
+    </div>
 </div>
 
 <!-- Call to Action -->
-<div class="container my-5">
-    <div class="card bg-light">
-        <div class="card-body p-5 text-center">
-            <h2>Subscribe to our newsletter</h2>
-            <p class="lead mb-4">Get the latest updates on new products and special promotions!</p>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Your email address">
-                        <button class="btn btn-primary" type="button">Subscribe</button>
+<div class="container my-5 mb-5">
+    <div class="card border-0 rounded-4 overflow-hidden shadow-lg">
+        <div class="row g-0">
+            <div class="col-md-4 d-none d-md-block">
+                <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Happy kids playing" class="img-fluid h-100" style="object-fit: cover;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body p-5 text-center">
+                    <h2 style="font-family: 'Fredoka One', cursive; color: var(--toy-primary);">Join the ToyLand Family!</h2>
+                    <p class="lead mb-4">Subscribe to our newsletter for exclusive deals, new arrivals, and special promotions!</p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Your email address">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-paper-plane me-2"></i>Subscribe
+                                </button>
+                            </div>
+                            <div class="mt-3 text-muted small">By subscribing, you agree to receive marketing emails from ToyLand. Don't worry, we hate spam too!</div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Trust Badges Section -->
+<div class="container my-5 text-center">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-3 col-6 mb-4">
+            <div class="d-flex flex-column align-items-center">
+                <i class="fas fa-shield-alt mb-3" style="font-size: 2.5rem; color: var(--toy-primary);"></i>
+                <h6 class="fw-bold">Secure Payments</h6>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4">
+            <div class="d-flex flex-column align-items-center">
+                <i class="fas fa-truck mb-3" style="font-size: 2.5rem; color: var(--toy-secondary);"></i>
+                <h6 class="fw-bold">Free Shipping</h6>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4">
+            <div class="d-flex flex-column align-items-center">
+                <i class="fas fa-medal mb-3" style="font-size: 2.5rem; color: var(--toy-accent);"></i>
+                <h6 class="fw-bold">Quality Guarantee</h6>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4">
+            <div class="d-flex flex-column align-items-center">
+                <i class="fas fa-headset mb-3" style="font-size: 2.5rem; color: var(--toy-purple);"></i>
+                <h6 class="fw-bold">24/7 Support</h6>
             </div>
         </div>
     </div>
@@ -108,13 +241,30 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
                     }
                 });
+            }, {
+                threshold: 0.1
             });
             
             elements.forEach(element => {
                 element.style.opacity = 0;
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(element);
+            });
+            
+            // Add hover effects to product cards
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.querySelector('.btn-primary').classList.add('pulse-animation');
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.querySelector('.btn-primary').classList.remove('pulse-animation');
+                });
             });
         });
     </script>

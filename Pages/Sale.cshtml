@@ -1,0 +1,327 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Sale";
+}
+
+<!-- Hero Section -->
+<div class="hero-section" style="background: linear-gradient(135deg, var(--toy-secondary) 0%, var(--toy-purple) 100%);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 fade-in hero-content">
+                <h1 class="display-4">Toy Sale!</h1>
+                <p class="lead mb-4">Incredible savings on your favorite toys! Limited time offers you don't want to miss.</p>
+                <div class="d-flex gap-3">
+                    <a href="#sale-items" class="btn btn-primary btn-lg">
+                        Shop Sale <i class="fas fa-tag ms-2"></i>
+                    </a>
+                    <a href="#clearance" class="btn btn-accent btn-lg">
+                        Clearance Items <i class="fas fa-fire ms-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block text-center fade-in">
+                <img src="https://img.icons8.com/fluency/512/null/sale.png" alt="Sale" class="img-fluid hero-image" style="max-height: 350px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sale Timer Section -->
+<div class="container my-5 text-center">
+    <div class="card border-0 rounded-4 overflow-hidden shadow-lg">
+        <div class="card-body p-4" style="background-color: var(--toy-secondary); color: white;">
+            <h2 style="font-family: 'Fredoka One', cursive;">Flash Sale Ends In:</h2>
+            <div class="countdown-timer d-flex justify-content-center gap-4 my-4">
+                <div class="countdown-item">
+                    <div class="countdown-value">2</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value">14</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value">36</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value">52</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+            <p class="lead">Use code <span class="promo-code">TOYFUN25</span> for an EXTRA 25% OFF!</p>
+        </div>
+    </div>
+</div>
+
+<!-- Sale Items Section -->
+<div class="container my-5" id="sale-items">
+    <h2 class="section-title text-center mb-5">Hot Deals</h2>
+    
+    <div class="row">
+        <!-- Sale Item 1 -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <span class="product-badge sale">25% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Wooden Racing Car">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Wooden Racing Car</h5>
+                    <p class="card-text flex-grow-1">Handcrafted wooden racing car with smooth-rolling wheels and non-toxic paint.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div>
+                            <span class="text-decoration-line-through text-muted me-2">$19.99</span>
+                            <span class="price">$14.99</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sale Item 2 -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <span class="product-badge sale">30% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Remote Control Car">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Remote Control Car</h5>
+                    <p class="card-text flex-grow-1">Fast and durable remote control car with LED lights and stunts.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div>
+                            <span class="text-decoration-line-through text-muted me-2">$39.99</span>
+                            <span class="price">$27.99</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sale Item 3 -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <span class="product-badge sale">40% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1516981879613-9f5da904015f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Dinosaur Figures">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Dinosaur Figure Set</h5>
+                    <p class="card-text flex-grow-1">Set of 12 realistic dinosaur figures with educational fact cards.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div>
+                            <span class="text-decoration-line-through text-muted me-2">$29.99</span>
+                            <span class="price">$17.99</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sale Item 4 -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <span class="product-badge sale">20% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1560421683-6856ea585c78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Art Set">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Complete Art Set</h5>
+                    <p class="card-text flex-grow-1">Creative art kit with crayons, markers, colored pencils, and sketch pad.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div>
+                            <span class="text-decoration-line-through text-muted me-2">$24.99</span>
+                            <span class="price">$19.99</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Clearance Section -->
+<div class="container my-5" id="clearance">
+    <div class="clearance-header text-center mb-4">
+        <h2 class="section-title">Clearance Items</h2>
+        <p class="lead">Last chance to grab these items before they're gone forever! Up to 70% off.</p>
+    </div>
+    
+    <div class="row">
+        <!-- Clearance Item 1 -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100" style="border: 2px solid var(--toy-secondary);">
+                <div class="position-relative">
+                    <span class="product-badge sale">50% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1576076819613-26f8537ae375?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Puzzle">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Space Adventure Puzzle</h5>
+                    <p class="card-text flex-grow-1">100-piece jigsaw puzzle featuring a colorful space adventure scene.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div>
+                            <span class="text-decoration-line-through text-muted me-2">$16.99</span>
+                            <span class="price">$8.49</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Clearance Item 2 -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100" style="border: 2px solid var(--toy-secondary);">
+                <div class="position-relative">
+                    <span class="product-badge sale">60% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Board Game">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Adventure Quest Game</h5>
+                    <p class="card-text flex-grow-1">Family board game with exciting quests and challenges for ages 6+.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div>
+                            <span class="text-decoration-line-through text-muted me-2">$27.99</span>
+                            <span class="price">$11.19</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Clearance Item 3 -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100" style="border: 2px solid var(--toy-secondary);">
+                <div class="position-relative">
+                    <span class="product-badge sale">70% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Musical Toy">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Musical Xylophone</h5>
+                    <p class="card-text flex-grow-1">Colorful wooden xylophone with child-safe mallet for musical exploration.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div>
+                            <span class="text-decoration-line-through text-muted me-2">$21.99</span>
+                            <span class="price">$6.59</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Clearance Item 4 -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100" style="border: 2px solid var(--toy-secondary);">
+                <div class="position-relative">
+                    <span class="product-badge sale">55% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1563901935883-cb61f5d49be4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Building Blocks">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Colorful Building Blocks</h5>
+                    <p class="card-text flex-grow-1">Set of 100 colorful building blocks for endless creative play.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div>
+                            <span class="text-decoration-line-through text-muted me-2">$24.99</span>
+                            <span class="price">$11.25</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Newsletter Section -->
+<div class="container my-5 mb-5 mt-5 pt-5">
+    <div class="card border-0 rounded-4 overflow-hidden shadow-lg">
+        <div class="card-body p-0">
+            <div class="row g-0">
+                <div class="col-lg-12">
+                    <div class="p-5" style="background-color: var(--toy-secondary); color: white;">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <h2 style="font-family: 'Fredoka One', cursive;">Never Miss a Sale!</h2>
+                                <p class="lead">Subscribe to our newsletter to get notified about upcoming sales and special offers!</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle me-2"></i> Early access to sales</li>
+                                    <li><i class="fas fa-check-circle me-2"></i> Exclusive subscriber discounts</li>
+                                    <li><i class="fas fa-check-circle me-2"></i> Special clearance alerts</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card border-0 shadow-lg rounded-4">
+                                    <div class="card-body p-4">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label text-dark">Email Address</label>
+                                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="agree">
+                                                    <label class="form-check-label text-dark" for="agree">
+                                                        I agree to receive marketing emails from ToyLand
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary w-100">
+                                                <i class="fas fa-paper-plane me-2"></i> Subscribe Now
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Add fade-in animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                    }
+                });
+            });
+            
+            elements.forEach(element => {
+                element.style.opacity = 0;
+                observer.observe(element);
+            });
+        });
+    </script>
+}

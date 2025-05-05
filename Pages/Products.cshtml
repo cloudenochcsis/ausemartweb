@@ -1,105 +1,119 @@
 @page
 @model ProductsModel
 @{
-    ViewData["Title"] = "Products";
+    ViewData["Title"] = "Toys";
 }
 
 <!-- Products Header -->
-<div class="hero-section" style="padding: 2rem 0;">
+<div class="hero-section" style="padding: 3rem 0;">
     <div class="container">
-        <h1 class="display-4">Explore Our Products</h1>
-        <p class="lead">Authentic Australian goods shipped directly to your doorstep</p>
+        <div class="hero-content text-center">
+            <h1 class="display-4">Discover Amazing Toys</h1>
+            <p class="lead">Find the perfect toys to spark imagination, creativity, and joy!</p>
+        </div>
     </div>
 </div>
 
 <div class="container my-5">
     <!-- Filter and Search Row -->
-    <div class="row mb-4">
-        <div class="col-md-6">
-            <div class="d-flex">
-                <select class="form-select me-2">
-                    <option selected>All Categories</option>
-                    <option>Souvenirs</option>
-                    <option>Food & Drinks</option>
-                    <option>Clothing</option>
-                    <option>Home Decor</option>
-                </select>
-                <select class="form-select">
-                    <option selected>Sort By: Featured</option>
-                    <option>Price: Low to High</option>
-                    <option>Price: High to Low</option>
-                    <option>Newest First</option>
-                </select>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search products...">
+    <div class="row g-4 mb-5">
+        <div class="col-lg-8 mx-auto">
+            <div class="search-bar">
+                <input type="text" class="form-control" placeholder="Search for toys, games, and more...">
                 <button class="btn btn-primary" type="button">
                     <i class="fas fa-search"></i>
                 </button>
             </div>
         </div>
+        <div class="col-12">
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                <button class="btn btn-sm btn-outline-primary active">All Toys</button>
+                <button class="btn btn-sm btn-outline-primary">Ages 0-2</button>
+                <button class="btn btn-sm btn-outline-primary">Ages 3-5</button>
+                <button class="btn btn-sm btn-outline-primary">Ages 6-8</button>
+                <button class="btn btn-sm btn-outline-primary">Ages 9-12</button>
+                <button class="btn btn-sm btn-outline-primary">Teens</button>
+                <button class="btn btn-sm btn-outline-secondary">On Sale</button>
+                <button class="btn btn-sm btn-outline-accent">New Arrivals</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h5 class="mb-0">Showing <span class="text-primary fw-bold">48</span> products</h5>
+        </div>
+        <div class="d-flex align-items-center">
+            <label class="me-2 text-nowrap">Sort By:</label>
+            <select class="form-select form-select-sm" style="width: auto;">
+                <option selected>Featured</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Newest First</option>
+                <option>Best Selling</option>
+                <option>Top Rated</option>
+            </select>
+        </div>
     </div>
 
-    <!-- Product Categories -->
-    <h2 class="mb-4">Featured Categories</h2>
+    <!-- Featured Collections -->
+    <h2 class="section-title text-center mb-5">Featured Collections</h2>
     <div class="row">
-        <!-- Kangaroo Products Card -->
-        <div class="col-md-4 mb-4 fade-in">
+        <!-- Educational Toys Card -->
+        <div class="col-md-4 mb-4 fade-in delay-1">
             <div class="card">
                 <div class="position-relative">
-                    <img src="/images/kangaroo.jpg" class="card-img-top product-card-img" alt="Kangaroo Products">
+                    <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top product-card-img" alt="Educational Toys">
                     <div class="position-absolute bottom-0 start-0 bg-primary text-white px-3 py-2 rounded-top">
-                        <i class="fas fa-star me-1"></i> Popular
+                        <i class="fas fa-brain me-1"></i> Learning
                     </div>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">Kangaroo Collection</h3>
-                    <p class="card-text">Explore our range of high-quality kangaroo-themed products.</p>
+                    <h3 class="card-title">Educational Toys</h3>
+                    <p class="card-text">Fun toys that help children learn while they play and develop essential skills.</p>
                     <div class="d-flex justify-content-between align-items-center">
-                        <button class="btn btn-primary">View Products</button>
-                        <span class="text-muted">15 items</span>
+                        <button class="btn btn-primary">Explore Collection</button>
+                        <span class="text-muted">24 items</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Koala Products Card -->
-        <div class="col-md-4 mb-4 fade-in">
+        <!-- Outdoor Play Card -->
+        <div class="col-md-4 mb-4 fade-in delay-2">
             <div class="card">
                 <div class="position-relative">
-                    <img src="/images/koala.jpg" class="card-img-top product-card-img" alt="Koala Products">
+                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top product-card-img" alt="Outdoor Play">
                     <div class="position-absolute bottom-0 start-0 bg-success text-white px-3 py-2 rounded-top">
-                        <i class="fas fa-leaf me-1"></i> Eco-friendly
+                        <i class="fas fa-sun me-1"></i> Outdoor
                     </div>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">Koala Collection</h3>
-                    <p class="card-text">Adorable koala-themed gifts and souvenirs for every occasion.</p>
+                    <h3 class="card-title">Outdoor Play</h3>
+                    <p class="card-text">Get kids active and having fun in the fresh air with our outdoor play collection.</p>
                     <div class="d-flex justify-content-between align-items-center">
-                        <button class="btn btn-primary">View Products</button>
-                        <span class="text-muted">12 items</span>
+                        <button class="btn btn-primary">Explore Collection</button>
+                        <span class="text-muted">18 items</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Spider Products Card -->
-        <div class="col-md-4 mb-4 fade-in">
+        <!-- Creative Arts Card -->
+        <div class="col-md-4 mb-4 fade-in delay-3">
             <div class="card">
                 <div class="position-relative">
-                    <img src="/images/spider.jpg" class="card-img-top product-card-img" alt="Spider Products">
-                    <div class="position-absolute bottom-0 start-0 bg-danger text-white px-3 py-2 rounded-top">
-                        <i class="fas fa-bolt me-1"></i> Trending
+                    <img src="https://images.unsplash.com/photo-1560421683-6856ea585c78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top product-card-img" alt="Creative Arts">
+                    <div class="position-absolute bottom-0 start-0 bg-accent text-dark px-3 py-2 rounded-top">
+                        <i class="fas fa-palette me-1"></i> Creative
                     </div>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">Spider Collection</h3>
-                    <p class="card-text">Unique spider-themed products for the brave and curious.</p>
+                    <h3 class="card-title">Creative Arts</h3>
+                    <p class="card-text">Spark imagination with art supplies, craft kits, and creative play sets for all ages.</p>
                     <div class="d-flex justify-content-between align-items-center">
-                        <button class="btn btn-primary">View Products</button>
-                        <span class="text-muted">8 items</span>
+                        <button class="btn btn-primary">Explore Collection</button>
+                        <span class="text-muted">15 items</span>
                     </div>
                 </div>
             </div>
@@ -107,61 +121,255 @@
     </div>
 
     <!-- Best Sellers Section -->
-    <h2 class="mt-5 mb-4">Best Sellers</h2>
+    <h2 class="section-title text-center mt-5 mb-5">Best Sellers</h2>
     <div class="row">
-        <!-- Product items would go here -->
-        @for (int i = 1; i <= 6; i++)
-        {
-            <div class="col-md-4 col-lg-3 mb-4 fade-in">
-                <div class="card product-card h-100">
-                    <div class="position-relative">
-                        <img src="@($"/images/{(i % 3 == 0 ? "spider" : i % 3 == 1 ? "kangaroo" : "koala")}.jpg")" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Product">
-                        @if (i % 4 == 0)
-                        {
-                            <span class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 m-2 rounded">SALE</span>
-                        }
-                    </div>
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Aussie Product @i</h5>
-                        <p class="card-text flex-grow-1">High-quality Australian product with premium features.</p>
-                        <div class="d-flex justify-content-between align-items-center mt-auto">
-                            <span class="fw-bold">$@(20 + i * 5).99</span>
-                            <button class="btn btn-sm btn-outline-primary">
-                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
-                            </button>
-                        </div>
+        <!-- Product 1: Building Blocks -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <span class="product-badge popular">POPULAR</span>
+                    <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Building Blocks">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Rainbow Building Blocks</h5>
+                    <p class="card-text flex-grow-1">Set of 50 colorful wooden blocks in various shapes for creative play.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <span class="price">$24.99</span>
+                        <button class="btn btn-sm btn-primary add-to-cart-btn" data-product-id="1" data-product-name="Rainbow Building Blocks" data-product-price="24.99">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
                     </div>
                 </div>
             </div>
-        }
+        </div>
+        
+        <!-- Product 2: Teddy Bear -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1562040506-a9b32cb51b94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Teddy Bear">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Huggable Teddy Bear</h5>
+                    <p class="card-text flex-grow-1">Super soft plush teddy bear with embroidered features, perfect for cuddling.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <span class="price">$19.99</span>
+                        <button class="btn btn-sm btn-primary add-to-cart-btn" data-product-id="1" data-product-name="Rainbow Building Blocks" data-product-price="24.99">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 3: Toy Car -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <span class="product-badge sale">SALE</span>
+                    <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Toy Car">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Wooden Racing Car</h5>
+                    <p class="card-text flex-grow-1">Handcrafted wooden racing car with smooth-rolling wheels and non-toxic paint.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div>
+                            <span class="text-decoration-line-through text-muted me-2">$18.99</span>
+                            <span class="price">$14.99</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary add-to-cart-btn" data-product-id="1" data-product-name="Rainbow Building Blocks" data-product-price="24.99">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 4: Art Set -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1560421683-6856ea585c78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Art Set">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Complete Art Set</h5>
+                    <p class="card-text flex-grow-1">Creative art kit with crayons, markers, colored pencils, and sketch pad.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <span class="price">$22.99</span>
+                        <button class="btn btn-sm btn-primary add-to-cart-btn" data-product-id="1" data-product-name="Rainbow Building Blocks" data-product-price="24.99">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- More Products Section -->
+    <div class="row mt-4">
+        <!-- Product 5: Dinosaur Toy -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <span class="product-badge new">NEW</span>
+                    <img src="https://images.unsplash.com/photo-1516981879613-9f5da904015f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Dinosaur Toy">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Dinosaur Figure Set</h5>
+                    <p class="card-text flex-grow-1">Set of 12 realistic dinosaur figures with educational fact cards.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <span class="price">$29.99</span>
+                        <button class="btn btn-sm btn-primary add-to-cart-btn" data-product-id="1" data-product-name="Rainbow Building Blocks" data-product-price="24.99">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 6: Puzzle -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1576076819613-26f8537ae375?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Puzzle">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Space Adventure Puzzle</h5>
+                    <p class="card-text flex-grow-1">100-piece jigsaw puzzle featuring a colorful space adventure scene.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <span class="price">$16.99</span>
+                        <button class="btn btn-sm btn-primary add-to-cart-btn" data-product-id="1" data-product-name="Rainbow Building Blocks" data-product-price="24.99">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 7: Musical Toy -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Musical Toy">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Musical Xylophone</h5>
+                    <p class="card-text flex-grow-1">Colorful wooden xylophone with child-safe mallet for musical exploration.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <span class="price">$21.99</span>
+                        <button class="btn btn-sm btn-primary add-to-cart-btn" data-product-id="1" data-product-name="Rainbow Building Blocks" data-product-price="24.99">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 8: Board Game -->
+        <div class="col-md-6 col-lg-3 mb-4 fade-in">
+            <div class="product-card h-100">
+                <div class="position-relative">
+                    <span class="product-badge popular">POPULAR</span>
+                    <img src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Board Game">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Adventure Quest Game</h5>
+                    <p class="card-text flex-grow-1">Family board game with exciting quests and challenges for ages 6+.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <span class="price">$27.99</span>
+                        <button class="btn btn-sm btn-primary add-to-cart-btn" data-product-id="1" data-product-name="Rainbow Building Blocks" data-product-price="24.99">
+                            <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center mt-4 mb-5">
+        <a href="#" id="load-more-btn" class="btn btn-lg btn-outline-primary">
+            <i class="fas fa-spinner me-2"></i> Load More Products
+        </a>
     </div>
 
     <!-- Call to Action -->
-    <div class="card bg-light mt-5">
-        <div class="card-body p-4 text-center">
-            <h3>Can't find what you're looking for?</h3>
-            <p class="mb-3">Contact our customer support team for assistance.</p>
-            <button class="btn btn-primary">
-                <i class="fas fa-headset me-2"></i> Contact Support
-            </button>
+    <div class="card bg-light mt-5 border-0 rounded-4 overflow-hidden">
+        <div class="row g-0">
+            <div class="col-md-4 d-none d-md-block">
+                <img src="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Happy kids playing" class="img-fluid h-100" style="object-fit: cover;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body p-5 text-center">
+                    <h2 style="font-family: 'Fredoka One', cursive; color: var(--toy-primary);">Can't find the perfect toy?</h2>
+                    <p class="lead mb-4">Our toy experts are here to help you find the perfect gift for any age, interest, or occasion!</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-headset me-2"></i> Chat with an Expert
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-envelope me-2"></i> Email Us
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary">
+                            <i class="fas fa-phone me-2"></i> Call Us
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<style>
-    .product-card-img {
-        height: 220px;
-        object-fit: cover;
-    }
-    
-    .product-card {
-        transition: transform 0.3s ease;
-    }
-    
-    .product-card:hover {
-        transform: translateY(-5px);
-    }
-</style>
+<!-- Newsletter Section -->
+<div class="container my-5 mb-5">
+    <div class="card border-0 rounded-4 overflow-hidden">
+        <div class="card-body p-0">
+            <div class="row g-0">
+                <div class="col-lg-12">
+                    <div class="p-5" style="background-color: var(--toy-primary); color: white;">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <h2 style="font-family: 'Fredoka One', cursive;">Join Our Toy Club!</h2>
+                                <p class="lead">Subscribe to our newsletter for exclusive deals, new arrivals, and special promotions!</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle me-2"></i> Be the first to know about new toys</li>
+                                    <li><i class="fas fa-check-circle me-2"></i> Exclusive subscriber-only discounts</li>
+                                    <li><i class="fas fa-check-circle me-2"></i> Special birthday surprises for your little ones</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card border-0 shadow-lg rounded-4">
+                                    <div class="card-body p-4">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="name" class="form-label text-dark">Your Name</label>
+                                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label text-dark">Email Address</label>
+                                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="agree">
+                                                    <label class="form-check-label text-dark" for="agree">
+                                                        I agree to receive marketing emails from ToyLand
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary w-100">
+                                                <i class="fas fa-paper-plane me-2"></i> Subscribe Now
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section Scripts {
     <script>
@@ -180,6 +388,66 @@
             elements.forEach(element => {
                 element.style.opacity = 0;
                 observer.observe(element);
+            });
+            
+            // Cart functionality
+            const cartBadge = document.querySelector('.cart-badge');
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+            let cartCount = parseInt(cartBadge.textContent) || 0;
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-product-id');
+                    const productName = this.getAttribute('data-product-name');
+                    const productPrice = this.getAttribute('data-product-price');
+                    
+                    // Increase cart count
+                    cartCount++;
+                    cartBadge.textContent = cartCount;
+                    
+                    // Add animation
+                    cartBadge.classList.remove('pulse-animation');
+                    setTimeout(() => {
+                        cartBadge.classList.add('pulse-animation');
+                    }, 10);
+                    
+                    // Show success message
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check me-1"></i> Added!';
+                    this.classList.add('btn-success');
+                    this.classList.remove('btn-primary');
+                    
+                    // Reset button after 2 seconds
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.classList.remove('btn-success');
+                        this.classList.add('btn-primary');
+                    }, 2000);
+                    
+                    // Log to console (in a real app, this would be an API call)
+                    console.log(`Added to cart: ${productName} - $${productPrice}`);
+                });
+            });
+            
+            // Load more products functionality
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            loadMoreBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Show loading state
+                const originalText = this.innerHTML;
+                this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Loading...';
+                this.disabled = true;
+                
+                // Simulate loading delay (in a real app, this would be an API call)
+                setTimeout(() => {
+                    // Reset button
+                    this.innerHTML = originalText;
+                    this.disabled = false;
+                    
+                    // Show message that more products were loaded
+                    alert('More products loaded successfully!');
+                }, 1500);
             });
         });
     </script>
