@@ -552,13 +552,12 @@ section {
 .footer {
   position: relative;
   width: 100%;
-  background-color: var(--neutral-dark);
-  color: white;
-  padding: 1.5rem 0 1rem;
-  font-size: 0.9rem;
-  box-shadow: var(--shadow-lg);
-  margin-top: 5rem;
-  border-top: 4px solid var(--toy-accent);
+  background-color: var(--neutral-light);
+  color: var(--neutral-dark);
+  padding: 0.75rem 0;
+  font-size: 0.85rem;
+  border-top: 1px solid #e1e5e9;
+  margin-top: 2rem;
   z-index: 10;
 }
 
@@ -566,120 +565,112 @@ section {
 .container.my-5:last-child,
 .container.mb-5:last-child,
 .container.my-5.mb-5:last-child {
-  margin-bottom: 6rem !important;
-  padding-bottom: 3rem;
+  margin-bottom: 3rem !important;
+  padding-bottom: 1rem;
 }
 
 .card.mt-5.mb-5:last-child,
 .card.my-5.mb-5:last-child {
-  margin-bottom: 6rem !important;
+  margin-bottom: 3rem !important;
 }
 
 /* Specific fix for the newsletter/call-to-action sections on home page */
 main .container:last-child {
-  margin-bottom: 6rem !important;
-  padding-bottom: 3rem;
+  margin-bottom: 3rem !important;
+  padding-bottom: 1rem;
 }
 
 /* Additional fix for App page Download Now section */
 .text-center.mb-5:last-child,
 .text-center.mb-5.fade-in:last-child {
-  margin-bottom: 6rem !important;
-  padding-bottom: 3rem;
+  margin-bottom: 3rem !important;
+  padding-bottom: 1rem;
 }
 
 /* General fix for last elements in main content */
 main > .container:last-child > *:last-child {
-  margin-bottom: 4rem !important;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem !important;
+  padding-bottom: 1rem;
 }
 
 .footer::before {
-  content: '';
-  position: absolute;
-  top: -25px;
-  left: 0;
-  width: 100%;
-  height: 25px;
-  background: linear-gradient(to bottom, transparent, rgba(44, 62, 80, 0.1) 50%, rgba(44, 62, 80, 0.3) 100%);
-  z-index: 1;
+  display: none;
 }
 
-.footer a {
-  color: var(--toy-accent);
-  transition: var(--transition);
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.2rem 0;
-  display: inline-block;
-}
-
-.footer a:hover {
-  color: white;
-  transform: translateX(5px);
-  text-decoration: none;
-}
-
-.footer h5 {
-  color: white;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  position: relative;
-  display: inline-block;
-  font-size: 1.1rem;
-}
-
-.footer h5::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 30px;
-  height: 2px;
-  background-color: var(--toy-accent);
-  border-radius: var(--radius-full);
-}
-
-.footer-brand {
-  display: flex;
+/* Tiny footer brand */
+.footer-brand-mini {
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.75rem;
+  color: var(--toy-primary);
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 
-.footer-brand img {
-  filter: brightness(0) invert(1);
-  transition: var(--transition);
+.footer-brand-mini img {
+  filter: none;
 }
 
-.footer-brand span {
-  font-weight: 800;
-  font-size: 1.3rem;
-  color: white;
-}
-
-.social-icons {
+/* Tiny footer links */
+.footer-links {
   display: flex;
-  gap: 0.75rem;
-  margin-top: 1rem;
-}
-
-.social-icons a {
-  display: flex;
-  align-items: center;
+  gap: 1.5rem;
   justify-content: center;
-  width: 35px;
-  height: 35px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  color: white;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer-links {
+    justify-content: flex-end;
+  }
+}
+
+.footer-links a {
+  color: var(--neutral-dark);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding: 0.25rem 0;
+  transition: var(--transition);
+  position: relative;
+}
+
+.footer-links a:hover {
+  color: var(--toy-primary);
+  text-decoration: none;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--toy-primary);
   transition: var(--transition);
 }
 
-.social-icons a:hover {
-  background-color: var(--toy-accent);
-  color: var(--neutral-dark);
-  transform: translateY(-3px) rotate(10deg);
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+/* Remove old footer styles */
+.footer h5,
+.footer h5::after,
+.footer-brand,
+.footer-brand img,
+.footer-brand span,
+.social-icons,
+.social-icons a {
+  display: none;
+}
+
+/* Additional spacing for main content area */
+main {
+  flex: 1;
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* Animations */
@@ -1281,11 +1272,4 @@ main > .container:last-child > *:last-child {
 
 .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
   background-color: rgba(75, 123, 236, 0.2);
-}
-
-/* Main content section */
-main {
-  flex: 1;
-  padding-bottom: 5rem;
-  margin-bottom: 2rem;
 }

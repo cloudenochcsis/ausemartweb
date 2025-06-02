@@ -100,43 +100,20 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="row gy-4">
-                <div class="col-md-4">
-                    <div class="footer-brand">
-                        <img src="https://img.icons8.com/fluency/96/null/teddy-bear.png" width="42" alt="ToyLand" />
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <span class="footer-brand-mini">
+                        <img src="https://img.icons8.com/fluency/96/null/teddy-bear.png" width="20" alt="ToyLand" />
                         <span style="font-family: 'Fredoka One', cursive;">ToyLand</span>
-                    </div>
-                    <p class="mb-2">Your one-stop shop for high-quality toys and games for children of all ages!</p>
-                    <p class="mb-0 small">© 2025 ToyLand. All rights reserved.</p>
-                    
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
+                    </span>
+                    <span class="ms-3 text-muted small">© 2025 All rights reserved.</span>
                 </div>
-                <div class="col-md-4">
-                    <h5>Shop</h5>
-                    <ul class="list-unstyled">
-                        <li><a asp-area="" asp-page="/Products"><i class="fas fa-puzzle-piece me-2"></i>All Toys</a></li>
-                        <li><a asp-area="" asp-page="/Categories"><i class="fas fa-tags me-2"></i>Categories</a></li>
-                        <li><a asp-area="" asp-page="/Sale"><i class="fas fa-gift me-2"></i>Sale Items</a></li>
-                        <li><a asp-area="" asp-page="/New"><i class="fas fa-star me-2"></i>New Arrivals</a></li>
-                        <li><a asp-area="" asp-page="/App/Index"><i class="fas fa-mobile-alt me-2"></i>Mobile App</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Help & Info</h5>
-                    <ul class="list-unstyled">
-                        <li><a asp-area="" asp-page="/About"><i class="fas fa-info-circle me-2"></i>About Us</a></li>
-                        <li><a asp-area="" asp-page="/Contact"><i class="fas fa-envelope me-2"></i>Contact Us</a></li>
-                        <li><a asp-area="" asp-page="/Shipping"><i class="fas fa-truck me-2"></i>Shipping Info</a></li>
-                        <li><a asp-area="" asp-page="/Returns"><i class="fas fa-undo me-2"></i>Returns Policy</a></li>
-                        <li><a asp-area="" asp-page="/Privacy"><i class="fas fa-shield-alt me-2"></i>Privacy Policy</a></li>
-                    </ul>
-                    <div class="small mt-3">
-                        <i class="fas fa-server me-2"></i>Running on: '@System.Environment.MachineName'
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-links">
+                        <a asp-area="" asp-page="/Products">Toys</a>
+                        <a asp-area="" asp-page="/Sale">Sale</a>
+                        <a asp-area="" asp-page="/Contact">Contact</a>
+                        <a asp-area="" asp-page="/Privacy">Privacy</a>
                     </div>
                 </div>
             </div>
