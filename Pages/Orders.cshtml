@@ -1,0 +1,192 @@
+@page
+@model ausemartweb.Pages.OrdersPageModel
+@{
+    ViewData["Title"] = "My Orders";
+}
+
+<div class="container" style="margin-top: 100px; min-height: 70vh;">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1 class="display-5">My Orders</h1>
+                <a asp-page="/Products" class="btn btn-primary">
+                    <i class="fas fa-plus me-2"></i>Continue Shopping
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            @if (Model.HasOrders)
+            {
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-shopping-bag me-2"></i>Order History</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Date</th>
+                                        <th>Items</th>
+                                        <th>Total</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Sample order data -->
+                                    <tr>
+                                        <td><strong>#ORD-001</strong></td>
+                                        <td>Jan 15, 2025</td>
+                                        <td>3 items</td>
+                                        <td><strong>$78.04</strong></td>
+                                        <td><span class="badge bg-success">Delivered</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#orderDetailModal">
+                                                <i class="fas fa-eye"></i> View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>#ORD-002</strong></td>
+                                        <td>Jan 10, 2025</td>
+                                        <td>1 item</td>
+                                        <td><strong>$29.99</strong></td>
+                                        <td><span class="badge bg-warning">Shipped</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary">
+                                                <i class="fas fa-truck"></i> Track
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="text-center py-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body py-5">
+                            <i class="fas fa-shopping-bag fa-5x text-muted mb-4"></i>
+                            <h3 class="text-muted mb-3">No Orders Yet</h3>
+                            <p class="text-muted mb-4">You haven't placed any orders yet. Start shopping to see your orders here!</p>
+                            <a asp-page="/Products" class="btn btn-primary btn-lg">
+                                <i class="fas fa-store me-2"></i>Start Shopping
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    @if (Model.HasOrders)
+    {
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="text-primary">2</h5>
+                        <small class="text-muted">Total Orders</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="text-success">$108.03</h5>
+                        <small class="text-muted">Total Spent</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="text-info">4</h5>
+                        <small class="text-muted">Items Purchased</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Order Detail Modal -->
+<div class="modal fade" id="orderDetailModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Order Details - #ORD-001</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <strong>Order Date:</strong> January 15, 2025
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Status:</strong> <span class="badge bg-success">Delivered</span>
+                    </div>
+                </div>
+                
+                <h6>Items Ordered:</h6>
+                <div class="table-responsive">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Kangaroo Plush Toy</td>
+                                <td>1</td>
+                                <td>$29.99</td>
+                                <td>$29.99</td>
+                            </tr>
+                            <tr>
+                                <td>Koala Keychain</td>
+                                <td>2</td>
+                                <td>$12.99</td>
+                                <td>$25.98</td>
+                            </tr>
+                            <tr>
+                                <td>Spider Fridge Magnet</td>
+                                <td>3</td>
+                                <td>$8.99</td>
+                                <td>$26.97</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="table-active">
+                                <th colspan="3">Total:</th>
+                                <th>$78.04</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="mt-3">
+                    <h6>Shipping Address:</h6>
+                    <p class="mb-0">123 Main Street<br>
+                    City, State 12345<br>
+                    United States</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Download Invoice</button>
+            </div>
+        </div>
+    </div>
+</div> 
