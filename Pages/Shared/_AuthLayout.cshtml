@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ToyLand</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ausemartweb.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/null/teddy-bear.png">
+    <meta name="description" content="ToyLand - Your one-stop shop for high-quality toys and games for children of all ages.">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .auth-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+            min-height: 100vh;
+        }
+        
+        .card {
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #0d6efd, #6610f2);
+            border: none;
+            border-radius: 10px;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #0b5ed7, #5a0fc8);
+            transform: translateY(-1px);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-success {
+            background: linear-gradient(45deg, #198754, #20c997);
+            border: none;
+            border-radius: 10px;
+        }
+        
+        .btn-success:hover {
+            background: linear-gradient(45deg, #157347, #1aa179);
+            transform: translateY(-1px);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            color: white !important;
+        }
+        
+        .navbar-brand span {
+            color: white !important;
+        }
+        
+        .navbar-light {
+            background: rgba(255, 255, 255, 0.1) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        .btn-outline-primary {
+            color: white;
+            border-color: white;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: white;
+            color: #0d6efd;
+        }
+        
+        .btn-primary {
+            background-color: white;
+            color: #0d6efd;
+            border-color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .cart-icon {
+            color: white !important;
+        }
+        
+        .footer {
+            background: rgba(0, 0, 0, 0.1);
+            color: white;
+            padding: 1rem 0;
+            margin-top: auto;
+        }
+        
+        .footer a {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-toggleable-sm navbar-light">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img src="https://img.icons8.com/fluency/96/null/teddy-bear.png" width="48" alt="ToyLand" />
+                    <span style="font-family: 'Fredoka One', cursive;">ToyLand</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-md-inline-flex justify-content-between">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/Index">
+                                <i class="fas fa-home me-2"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/Products">
+                                <i class="fas fa-puzzle-piece me-2"></i> Toys
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/Categories">
+                                <i class="fas fa-tags me-2"></i> Categories
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/Sale">
+                                <i class="fas fa-gift me-2"></i> Sale
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        @{
+                            var userName = Context.Session.GetString("UserName");
+                            var isLoggedIn = !string.IsNullOrEmpty(userName);
+                        }
+                        
+                        @if (isLoggedIn)
+                        {
+                            <div class="dropdown me-3">
+                                <button class="btn btn-outline-light dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                                    <i class="fas fa-user me-2"></i>@userName
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-shopping-bag me-2"></i>Orders</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" asp-page="/Logout"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                                </ul>
+                            </div>
+                        }
+                        else
+                        {
+                            <a class="btn btn-outline-primary me-2" asp-page="/Login">
+                                <i class="fas fa-sign-in-alt me-2"></i> Sign In
+                            </a>
+                            <a class="btn btn-primary me-3" asp-page="/Register">
+                                <i class="fas fa-user-plus me-2"></i> Register
+                            </a>
+                        }
+                        
+                        <a class="position-relative cart-icon" asp-area="" asp-page="/Cart">
+                            <i class="fas fa-shopping-cart fs-4"></i>
+                            <span class="cart-badge pulse-animation">3</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        @if (TempData.ContainsKey("SuccessMessage"))
+        {
+            <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
+                @TempData["SuccessMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        }
+        @RenderBody()
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <span class="small">© 2025 ToyLand. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html> 
