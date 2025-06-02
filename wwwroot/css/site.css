@@ -581,6 +581,19 @@ main .container:last-child {
   padding-bottom: 3rem;
 }
 
+/* Additional fix for App page Download Now section */
+.text-center.mb-5:last-child,
+.text-center.mb-5.fade-in:last-child {
+  margin-bottom: 6rem !important;
+  padding-bottom: 3rem;
+}
+
+/* General fix for last elements in main content */
+main > .container:last-child > *:last-child {
+  margin-bottom: 4rem !important;
+  padding-bottom: 2rem;
+}
+
 .footer::before {
   content: '';
   position: absolute;
