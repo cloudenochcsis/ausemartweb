@@ -56,6 +56,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  padding-bottom: 2rem;
 }
 
 /* Typography */
@@ -556,19 +557,28 @@ section {
   padding: 1.5rem 0 1rem;
   font-size: 0.9rem;
   box-shadow: var(--shadow-lg);
-  margin-top: 1.5rem;
+  margin-top: 3rem;
   border-top: 4px solid var(--toy-accent);
   z-index: 10;
 }
 
-/* Minimal fix for footer overlap - only target specific problem sections */
+/* Enhanced fix for footer overlap - ensure proper spacing */
 .container.my-5:last-child,
-.container.mb-5:last-child {
-  margin-bottom: 2rem !important;
+.container.mb-5:last-child,
+.container.my-5.mb-5:last-child {
+  margin-bottom: 4rem !important;
+  padding-bottom: 2rem;
 }
 
-.card.mt-5.mb-5:last-child {
-  margin-bottom: 2rem !important;
+.card.mt-5.mb-5:last-child,
+.card.my-5.mb-5:last-child {
+  margin-bottom: 4rem !important;
+}
+
+/* Specific fix for the newsletter/call-to-action sections on home page */
+main .container:last-child {
+  margin-bottom: 4rem !important;
+  padding-bottom: 2rem;
 }
 
 .footer::before {
@@ -1258,4 +1268,10 @@ section {
 
 .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
   background-color: rgba(75, 123, 236, 0.2);
+}
+
+/* Main content section */
+main {
+  flex: 1;
+  padding-bottom: 3rem;
 }
