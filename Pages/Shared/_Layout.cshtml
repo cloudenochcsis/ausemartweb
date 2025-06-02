@@ -68,7 +68,7 @@
                                     <li><a class="dropdown-item" asp-page="/Profile"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
                                     <li><a class="dropdown-item" asp-page="/Orders"><i class="fas fa-shopping-bag me-2"></i>Orders</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" asp-page="/Logout"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                                    <li><a class="dropdown-item logout-link" asp-page="/Logout"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
                                 </ul>
                             </div>
                         }
@@ -81,11 +81,6 @@
                                 <i class="fas fa-user-plus me-2"></i> Register
                             </a>
                         }
-                        
-                        <a class="position-relative cart-icon" asp-area="" asp-page="/Cart">
-                            <i class="fas fa-shopping-cart fs-4"></i>
-                            <span class="cart-badge pulse-animation">3</span>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -166,6 +161,28 @@
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+
+        // Logout click handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoutLinks = document.querySelectorAll('.logout-link');
+            logoutLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    console.log('Logout clicked');
+                    // Add a small delay to show user feedback
+                    e.preventDefault();
+                    
+                    // Show loading state (optional)
+                    const icon = this.querySelector('i');
+                    const originalClass = icon.className;
+                    icon.className = 'fas fa-spinner fa-spin me-2';
+                    
+                    // Navigate to logout after brief delay
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 500);
+                });
+            });
         });
     </script>
 

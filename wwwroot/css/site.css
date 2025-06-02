@@ -734,12 +734,16 @@ section {
   align-items: center;
   justify-content: center;
   position: relative;
+  text-decoration: none !important;
+  cursor: pointer;
+  z-index: 10;
 }
 
 .cart-icon:hover {
   background-color: rgba(75, 123, 236, 0.08);
-  color: var(--toy-primary);
+  color: var(--toy-primary) !important;
   transform: translateY(-2px) rotate(5deg);
+  text-decoration: none !important;
 }
 
 .cart-badge {
